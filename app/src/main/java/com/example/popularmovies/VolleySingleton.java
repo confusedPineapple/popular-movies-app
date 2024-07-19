@@ -14,7 +14,7 @@ public class VolleySingleton {
         requestQueue = Volley.newRequestQueue(context.getApplicationContext());
     }
 
-    private static synchronized VolleySingleton getInstance(Context context){
+    static synchronized VolleySingleton getInstance(Context context){
         if(instance == null){
             instance = new VolleySingleton(context);
         }
